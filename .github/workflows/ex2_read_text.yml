@@ -1,0 +1,25 @@
+---
+
+on:
+  # push:
+  workflow_dispatch:
+    # branches:
+    #   - main
+
+permissions:
+  pull-requests: write
+  contents: write
+  repository-projects: write
+
+jobs:
+  display_files:
+    name: Job name display file content
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Display file content
+        run: |
+          cat text.txt
+        shell: bash
+...
