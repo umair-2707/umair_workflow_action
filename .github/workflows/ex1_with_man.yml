@@ -1,0 +1,13 @@
+---
+on:
+  workflow_dispatch:
+jobs:
+  display_files:
+    name: Run a sample command 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display output
+        run: |
+          echo "Hello World"
+        shell: bash
+...
