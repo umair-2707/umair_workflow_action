@@ -1,0 +1,16 @@
+---
+on: [push]
+
+jobs:
+  Job1:
+    runs-on: ubuntu-latest
+    env:
+      VAR1: "Umair"
+    steps:
+      - name: access VAR1
+        run: echo "you are awesome $VAR1"
+      - name: print github context
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Workflow: ${{ github.workflow }}"
+...
